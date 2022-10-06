@@ -22,24 +22,24 @@
 
  //va applicato uno sconto del 20% per i minorenni
 
-   //  const prezzoMinorenne = (priceNoDiscount / 100 * 20).toFixed(2) ;
+   //  const prezzoMinorenne = (priceNoDiscount - priceNoDiscount / 100 * 20).toFixed(2) ;
    // console.log(prezzoMinorenne + euro);
 
  //va applicato uno sconto del 40% per gli over 65.
 
-   // const prezzoOver = (priceNoDiscount / 100 * 40).toFixed(2) ;
+   // const prezzoOver = (priceNoDiscount - priceNoDiscount / 100 * 40).toFixed(2) ;
    // console.log(prezzoOver + euro);
 
 if (anniPasseggero < 18) {
 
-    const prezzoMinorenne = ( priceNoDiscount / 100 * 20).toFixed(2) ;
+    const prezzoMinorenne = ( priceNoDiscount - priceNoDiscount / 100 * 20).toFixed(2) ;
 
     //console.log(prezzoMinorenne + euro);
     document.getElementById("price").innerHTML = prezzoMinorenne + euro;
 
 } else if (anniPasseggero > 65) {
 
-    const prezzoOver = (priceNoDiscount / 100 * 40).toFixed(2) ;
+    const prezzoOver = (priceNoDiscount - priceNoDiscount / 100 * 40).toFixed(2) ;
     //console.log(prezzoOver + euro);
     document.getElementById("price").innerHTML = prezzoOver + euro;
 } else{
