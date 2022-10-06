@@ -32,16 +32,16 @@
 
 if (anniPasseggero < 18) {
 
-    const prezzoMinorenne = ( priceNoDiscount - priceNoDiscount / 100 * 20).toFixed(2) ;
+    const prezzoMinorenne = ( priceNoDiscount - priceNoDiscount / 100 * 20) ;
 
     //console.log(prezzoMinorenne + euro);
-    document.getElementById("price").innerHTML = prezzoMinorenne + euro;
+    document.getElementById("price").innerHTML = prezzoMinorenne.toFixed(2) + euro;
 
 } else if (anniPasseggero > 65) {
 
-    const prezzoOver = (priceNoDiscount - priceNoDiscount / 100 * 40).toFixed(2) ;
+    const prezzoOver = (priceNoDiscount - priceNoDiscount / 100 * 40) ;
     //console.log(prezzoOver + euro);
-    document.getElementById("price").innerHTML = prezzoOver + euro;
+    document.getElementById("price").innerHTML = prezzoOver.toFixed(2) + euro;
 } else{
     document.getElementById("price").innerHTML = priceNoDiscount + euro;
 }
